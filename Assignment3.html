@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment3</title>
+</head>
+<body>
+
+
+    <script>
+
+        var maths = + prompt("Enter your marks");
+        var chemistry = + prompt("Enter your marks");
+        var physics = + prompt("Enter your marks");
+
+        var totalMarks = 300;
+        var addTotalMarks = maths + chemistry + physics;
+        var percentage = addTotalMarks / totalMarks * 100 ;
+
+        document.write("<h1>" + "Mark Sheet" + "</h1>")
+
+        document.write("<h3>" + "chemistry: " + chemistry + "/100" + "</h3>")
+
+        document.write("<h3>" + "physics: " + physics + "/100" + "</h3>")
+
+        document.write("<h3>" + "maths: " + maths + "/100" + "</h3>")
+
+        
+        document.write("<h3>" + "percentage: " + percentage + "%" + "</h3>")
+
+        if (percentage >= 70) {
+        document.write("<h3>" + "Grade: A "  + "</h3>")
+            
+        } 
+
+        else if (percentage >= 60) {
+        document.write("<h3>" + "Grade: B "  + "</h3>")
+            
+        } 
+
+        else if (percentage >= 50) {
+        document.write("<h3>" + "Grade: C "  + "</h3>")
+            
+        } else { 
+            document.write("<h3>" + "Grade: Fail "  + "</h3>") 
+        }
+        
+        
+
+  
+        
+        
+
+    </script>
+    
+
+</body>
+</html>
