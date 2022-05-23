@@ -11,12 +11,15 @@
 
     <script>
 
-        var maths = + prompt("Enter your marks");
-        var chemistry = + prompt("Enter your marks");
-        var physics = + prompt("Enter your marks");
+        var maths = + prompt("Enter your maths marks");
+        var chemistry = + prompt("Enter your chemistry marks");
+        var physics = + prompt("Enter your physics marks");
+        var Islamiat  = + prompt("Enter your Islamiat  marks");
+        var english = + prompt("Enter your english marks");
+        var urdu = + prompt("Enter your urdu marks");
 
-        var totalMarks = 300;
-        var addTotalMarks = maths + chemistry + physics;
+        var totalMarks = 550;
+        var addTotalMarks = maths + chemistry + physics + Islamiat + english + urdu;
         var percentage = addTotalMarks / totalMarks * 100 ;
 
         document.write("<h1>" + "Mark Sheet" + "</h1>")
@@ -26,6 +29,12 @@
         document.write("<h3>" + "physics: " + physics + "/100" + "</h3>")
 
         document.write("<h3>" + "maths: " + maths + "/100" + "</h3>")
+        
+        document.write("<h3>" + "Islamiat: " + chemistry + "/50" + "</h3>")
+
+        document.write("<h3>" + "english: " + english + "/100" + "</h3>")
+
+        document.write("<h3>" + "urdu: " + urdu + "/100" + "</h3>")
 
         
         document.write("<h3>" + "percentage: " + percentage + "%" + "</h3>")
@@ -42,6 +51,11 @@
 
         else if (percentage >= 50) {
         document.write("<h3>" + "Grade: C "  + "</h3>")
+            
+        } 
+        
+        else if (percentage >= 40) {
+        document.write("<h3>" + "Grade: D "  + "</h3>")
             
         } else { 
             document.write("<h3>" + "Grade: Fail "  + "</h3>") 
