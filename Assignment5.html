@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <fieldset> <legend> Converter Of  <sup> o</sup>C To <sup> o</sup>F</legend>
+
+        <input type="number" id="TinC" placeholder="Enter Temprature in Celsius">
+        </fieldset>
+    
+        <fieldset> <legend> Converter Of  <sup> o</sup>F To <sup> o</sup>C</legend>
+       
+        <input type="number" id="TinF" placeholder="Enter Temprature in Farenhite">
+        </fieldset>
+    
+        <button onclick="submit()"> Submit</button>
+    
+        <h1 id="CtoF" ></h1>
+        <h1 id="FtoC"></h1>
+   
+    
+    <script>
+        function submit() {
+            
+        let TinC = document.querySelector (`#TinC`).value ;
+        console.log (TinC) ;
+        let convCtoF = (Number(TinC) * 9 / 5  ) + 32 ;
+        console.log (convCtoF) ;
+        let CtoF = document.querySelector (`#CtoF`) ;
+        CtoF.innerHTML = TinC + `C` + ` = ` + convCtoF +  `F `   ;
+
+
+
+        let TinF = document.querySelector (`#TinF`).value ;
+        console.log (TinF) ;
+        let convFtoC = (Number(TinF) - 32) * 5/9 ;
+        console.log (convFtoC) ;
+        let FtoC = document.querySelector (`#FtoC`) ;
+        FtoC.innerHTML = TinF + `F` + ` = ` + convFtoC + `C` ;
+        
+        }
+
+
+
+        let number = prompt ("enter your number") ;
+        
+        document.write (number + " x 1 = " + number * 1  + "<br> " +
+        number + " x 2 = " + number *2 + "<br>" +
+        number + " x 3 = " + number *3 + "<br>" +
+        number + " x 4 = " + number *4 + "<br>" + 
+        number + " x 5 = " + number *5 + "<br>" +
+        number + " x 6 = " + number *6 + "<br>" +
+        number + " x 7 = " + number *7 + "<br>" +
+        number + " x 8 = " + number *8 + "<br>" +
+        number + " x 9 = " + number *9 + "<br>" +
+        number + " x 10 = " + number *10 + "<br> <br> <br> <br> <br> <br>" ) ;
+
+        let num1 = 07 ;
+        let num2 = 04 ;
+        let sum = num1 + num2 ;
+        let sub = num1 - num2 ;
+        let multiply = num1 * num2 ;
+        let divide = num1 / num2 ; 
+        let mod = num1 % num2 ; 
+        
+        document.write ("Sum of " + num1 + " and " +num2+ " is " +sum+ "<br/> <br/>" ) ;
+
+        document.write ("Subraction of "  +num1+ " and " +num2+ " is " +sub+ "<br/> <br/>") ; 
+
+        document.write ("Multiplication of " +num1+ " and " +num2+ " is " +multiply+ "<br/> <br/>") ;
+
+        document.write ("Division of " +num1+ " and " +num2+ " is " +divide+ "<br/> <br/>") ;
+
+        document.write ("Modulas of " +num1+ " and " +num2+ " is " +mod+ "<br/> <br/> <br> <br> <br> <br> <br> <br> <br>" ) ;
+
+
+        let s = 5 ;
+
+        document.write ("Initial value is : " +s+ "<br/> <br>") ;
+
+        document.write  ("Value after increment is : " + ++s  + "<br/> <br> " ) ;
+        
+        document.write ("Value after addition is : " + Number(s + ++s) + " <br> <br> ") ;
+
+        document.write (" Value after decrement is : " + (--s + s ) + "<br> <br>") ;
+
+        document.write (" The remainder is : " + ( s % s) + "<br> <br> <br> <br> <br> <br> <br> <br> <br> <br>") ;
+
+
+        let price = 600  ;
+
+        document.write ("Total cost of buying 5 tickets to a movie is " + (price * 5) + "PKR");
+
+    </script>
+
+</body>
+</html>
