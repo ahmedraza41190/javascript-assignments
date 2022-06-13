@@ -1,0 +1,35 @@
+body{
+    background-color: brown;
+    color: white;
+}
+h2{
+    color: burlywood;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    color: burlywood;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+button{
+    background-color: black;
+    color: white;
+    margin-left: 47%;
+}
+
+
+#input_1{
+    margin-left: 48%;
+}
+
+
+#input_2{
+    margin-left: 48%;
+}
+
+
+#result{
+    margin-left: 48%;
+}
+
+
