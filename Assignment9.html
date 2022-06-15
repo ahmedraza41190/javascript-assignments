@@ -7,7 +7,7 @@
     <title>Assignment9</title>
 	<link rel="stylesheet" href="./index.css">
 </head>
-<body>
+<!-- <body>
     <h1>Matrix Addition</h1>
 
 	<button onclick="start()">START</button><br><br>
@@ -116,5 +116,72 @@
     document.querySelector("#td27").innerHTML = result[2][2];
 }
     </script>
+</body> -->
+
+<center><h1>Matrix Sum App</h1><hr><br>
+    <h3 >Enter The Number of rows and columns</h3><br>
+    <input type="number"  required min="2" placeholder="Number of Rows" id="input1" >&nbsp; X &nbsp;
+    <input type="number"  required min="2" placeholder="Number of Columns" id="input2">&nbsp;&nbsp;<br><br><br>
+    <button id="fn" onclick="myfunction()">Create Matrix</button>
+    <br>
+    <br>
+    <div id="bnm" class="klp">
+        <div id="mat1" ></div>&nbsp;+
+        <div id="mat2" ></div>&nbsp;<br>
+        <button onclick="sum()">Sum</button><br><br>
+        <div id="resmat" ></div>
+    </div>
 </body>
+    <script>
+        let input1 = ''
+        let input2 = ''
+
+
+
+        function myfunction() {
+            let mat1 = document.querySelector('#mat1')
+            let mat2 = document.querySelector('#mat2')
+            let resmat = document.querySelector('#resmat')
+
+            mat1.innerHTML = "";
+            mat2.innerHTML = "";
+            resmat.innerHTML = "";
+
+			if (input1 == "" || input2 == "") {
+        alert("Please enter number");
+        return;
+    }
+
+
+            input1 = +document.querySelector('#input1').value
+            input2 = +document.querySelector('#input2').value
+
+            for (let i = 0; i < input1; i++) {
+                for (let j = 0; j < input2; j++) {
+                    console.log('running')
+                    mat1.innerHTML +=
+                        `<input type="number" required min="0" max="100" id="m1-${i}-${j}" value='0'>`;
+                    mat2.innerHTML +=
+                        `<input type="number" required min="0" max="100" id="m2-${i}-${j}" value='0'>`;
+                    resmat.innerHTML +=
+                        `<input type="number" disabled required min="0" max="100" id="resmat-${i}-${j}" value='0'>`
+                }
+                mat1.innerHTML += `<br>`
+                mat2.innerHTML += `<br>`
+                resmat.innerHTML += `<br>`
+            }
+            document.querySelector('#bnm').classList.remove('klp')
+        }
+        function sum() {
+            for (let i = 0; i < input1; i++) {
+                for (let j = 0; j < input2; j++) {
+                    console.log('running')
+                    document.querySelector(`#resmat-${i}-${j}`).value =
+                        +document.querySelector(`#m1-${i}-${j}`).value
+                        +
+                        +document.querySelector(`#m2-${i}-${j}`).value;
+                }
+            }
+        }
+    </script></center>
 </html>
